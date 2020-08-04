@@ -1,5 +1,5 @@
-# markdown-editor
-No bells and whistles markdown editor with preview using [marked.js](https://marked.js.org/#/README.md#README.md) to convert plain text to markdown and react as the front end.
+# Markdown editor
+No bells and whistles markdown editor with preview using [marked.js](https://marked.js.org/#/README.md#README.md) to convert plain text to markdown and react as the front end. Deployed on gh-pages [here](https://justinhtn.github.io/markdown-editor/) you can play with. To run locally, use below instructions.
 
 ## Install
 ```
@@ -11,5 +11,4 @@ npm install
 ```
 npm start
 ```
-
 
