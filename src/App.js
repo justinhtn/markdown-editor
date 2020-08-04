@@ -7,20 +7,21 @@ const defaultMarkdown = `
 ## Developer
 <img src='https://pbs.twimg.com/profile_images/1289682060408311808/Cgn95ClH_200x200.jpg'/>
 
-[Portfolio](github.com/justinhtn)
+[Github](github.com/justinhtn)
 \`\`\`
 /*a code block:*/
 
-.thick-green-border {
-  border-color: green;
-  border-width: 10px;
+.blue-border {
+  border-color: blue;
+  border-width: 1x;
   border-style: solid;
-  border-radius: 50%;
+  border-radius: 2px;
   \`\`\`
 
   <b>Technologies</b>
 
-  <li>React</li>
+  <li>React.js</li>
+  <li>Marked.js</li>
 
   >> I began my career as a product designer.
 `;
@@ -56,7 +57,9 @@ class App extends React.Component {
             id="editor"
             onChange={this.updateText}
             placeholder="Your markdown goes here..."
-          />
+          >
+            {defaultMarkdown}
+          </textarea>
           <div
             id="preview"
             dangerouslySetInnerHTML={{ __html: marked(this.state.input) }}
