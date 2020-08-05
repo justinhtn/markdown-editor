@@ -1,17 +1,18 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  margin: 0px
 }
 
 #app {
   font-family: sans-serif;
   text-align: center;
-  margin: 10px;
+  margin: 0;
 }
 
 #container {
   display: flex;
   width: 100%;
-  height: 98vh;
+  height: 100vh;
   flex-direction: row;
 }
 
@@ -23,9 +24,9 @@ body {
   color: white;
   flex-basis: 50%;
   padding: 20px;
-  margin: 10px;
-  border-radius: 5px;
   font-size: 1em;
+  outline: none;
+  resize: none;
   
 }
 
@@ -33,12 +34,11 @@ body {
   flex-basis: 50%;
   background-color: rgb(255, 255, 255);
   padding: 20px;
-  margin: 10px;
   text-align: left;
-  border-radius: 5px;
   border: solid 1px rgb(212, 212, 212);
 
 }
+
 
 @media only screen and (max-width: 600px) {
   #container {
