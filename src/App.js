@@ -57,8 +57,8 @@ class App extends React.Component {
             id="editor"
             onChange={this.updateText}
             placeholder="Your markdown goes here..."
+            defaultValue={defaultMarkdown}
           >
-            {defaultMarkdown}
           </textarea>
           <div
             id="preview"
