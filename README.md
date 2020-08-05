@@ -7,8 +7,10 @@ git clone https://github.com/justinhtn/markdown-editor.git
 cd markdown-editor
 npm install
 ```
-## Start
+## Run
 ```
 npm start
 ```
 
+## What's next
+Move build directory to new gh-pages branch for deployment
