@@ -27,7 +27,30 @@ body {
   font-size: 1em;
   outline: none;
   resize: none;
-  
+}
+
+#copy-button {
+  position: absolute;
+  top: 0px;
+  right: 50%;
+  background-color: none;
+  border-radius: 2px;
+  border-color: white;
+  padding: 10px 20px;
+  margin: 15px;
+  color: white;
+  border-width: 1px;
+  border-style: solid;
+  font-size: .85em;
+}
+
+
+#copy-button:focus{
+  outline: none;   
+}
+
+#copy-button:active{
+  outline: none;   
 }
 
 #preview {
@@ -43,6 +66,18 @@ body {
 @media only screen and (max-width: 600px) {
   #container {
     flex-direction: column;
+  }
+  #copy-button {
+    position: absolute;
+    top: 0px;
+    right: 50%;
+    background-color:  rgb(12, 12, 12);;
+    border-radius: 2px;
+    outline: none;
+    border-color: white;
+    padding: 10px 20px;
+    margin: 15px;
+    color: white;
   }
 }
 
