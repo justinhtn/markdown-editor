@@ -2,8 +2,7 @@ import React from "react";
 import "./styles.css";
 import marked from "marked";
 
-const defaultMarkdown =
-`An h1 header
+const defaultMarkdown = `An h1 header
 ============
 
 Paragraphs are separated by a blank line.
@@ -39,17 +38,15 @@ for (let i=0; i < groceryList.length; i++ {
     console.log(i) 
 }
 ~~~ 
-
-
 `;
 
 const CopyButton = (props) => {
   return (
-    <div id='copy-button' onClick={props.handleCopy}>
-    {props.status}
+    <div id="copy-button" onClick={props.handleCopy}>
+      {props.status}
     </div>
-  )
-}
+  );
+};
 
 class App extends React.Component {
   constructor(props) {
@@ -57,26 +54,25 @@ class App extends React.Component {
 
     this.state = {
       input: defaultMarkdown,
-      copied: 'Copy'
+      copied: "Copy",
     };
 
     this.handleChange = this.handleChange.bind(this);
-    this.copyCodeToClipboard = this.copyCodeToClipboard.bind(this)
+    this.copyCodeToClipboard = this.copyCodeToClipboard.bind(this);
   }
 
   componentDidMount() {
     this.setState({
-      input: defaultMarkdown
+      input: defaultMarkdown,
     });
   }
 
   handleChange(event) {
     this.setState({
       input: event.target.value,
-      copied:'Copy'
+      copied: "Copy",
     });
   }
-
 
   copyCodeToClipboard = (state) => {
     const context = this.textArea;
@@ -86,24 +82,25 @@ class App extends React.Component {
     document.getSelection().addRange(document.createRange());
 
     this.setState({
-      copied: 'Copied'
-    })
-
-  }
-
+      copied: "Copied",
+    });
+  };
 
   render() {
     return (
       <React.Fragment>
         <div id="container">
           <textarea
-            ref={(textarea) => this.textArea = textarea}
+            ref={(textarea) => (this.textArea = textarea)}
             id="editor"
             onChange={this.handleChange}
             placeholder="Your markdown goes here..."
             defaultValue={defaultMarkdown}
           />
-          <CopyButton status={this.state.copied} handleCopy={() => this.copyCodeToClipboard()}/>
+          <CopyButton
+            status={this.state.copied}
+            handleCopy={() => this.copyCodeToClipboard()}
+          />
           <div
             id="preview"
             dangerouslySetInnerHTML={{ __html: marked(this.state.input) }}
