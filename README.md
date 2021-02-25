@@ -13,4 +13,4 @@ npm start
 ```
 
 ## What's next
-Move build directory to new gh-pages branch for deployment
+Add ability to create simple directory tree
